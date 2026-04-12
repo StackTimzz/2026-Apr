@@ -496,7 +496,7 @@ export default function App() {
                 <div style={{ padding: "24px 28px", background: "#080808", border: "1px solid #111", borderTop: "none", marginBottom: 2 }}>
                   <div style={{ fontSize: 8, letterSpacing: 3, color: "#1e1e1e", marginBottom: 18, fontFamily: mono }}>CATEGORY SCORES — TAP EACH TO SEE WHAT IT MEANS</div>
                   {CATEGORIES.map((cat, i) => (
-                    <CategoryBar key={cat.key} {...cat} score={result.categories[cat.key] || 30} weight={weights[cat.key] || 3} explanation={result.categoryExplanations?.[cat.key]} index={i} />
+                    <CategoryBar key={cat.key} label={cat.label} icon={cat.icon} desc={cat.desc} score={result.categories[cat.key] || 30} weight={weights[cat.key] || 3} explanation={result.categoryExplanations?.[cat.key]} index={i} />
                   ))}
                 </div>
 
